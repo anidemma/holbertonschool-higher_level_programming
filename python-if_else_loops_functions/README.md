@@ -5,4 +5,6 @@
 4-print hexa
 5-print comb2
 6-print comb3
-
+7-islower
+8-uppercase
+9-print last digit
