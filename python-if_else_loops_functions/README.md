@@ -4,3 +4,5 @@
 3-print alphabt
 4-print hexa
 5-print comb2
+6-print comb3
+
