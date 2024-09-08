@@ -11,3 +11,5 @@
 10-add
 11-pow
 12-fizzbuzz
+100-print tebahpla
+101-remove char at
