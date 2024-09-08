@@ -8,3 +8,6 @@
 7-islower
 8-uppercase
 9-print last digit
+10-add
+11-pow
+12-fizzbuzz
