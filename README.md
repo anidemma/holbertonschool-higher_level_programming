@@ -1,2 +1,2 @@
 Python - Hello, World
-Python - if/else, loops, functions
+Python - if/else, loops, function
