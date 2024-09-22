@@ -65,5 +65,6 @@ class Rectangle:
         else:
             return rect_1
 
+    @classmethod
     def square(cls, size=0):
         return cls(size, size)
