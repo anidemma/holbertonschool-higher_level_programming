@@ -4,7 +4,6 @@
 
 class Rectangle:
     """Rectangle"""
-
     number_of_instances = 0
     print_symbol = "#"
 
@@ -46,7 +45,9 @@ class Rectangle:
         return (self.height + self.width) * 2
 
     def __str__(self):
-        return ("" + (self.__width * str(self.print_symbol) + '\n') * self.__height).rstrip('\n')
+        return ("" + (
+            self.__width * str(self.print_symbol) + '\n'
+            ) * self.__height).rstrip('\n')
 
 
     def __repr__(self) -> str:
