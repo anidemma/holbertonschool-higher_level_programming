@@ -1,27 +1,28 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""VerboseList"""
 from abc import ABC, abstractmethod
 
 
 class VerboseList(list):
 
-    def append(self, value):
-        print(f"Added [{value}] to the list.")
-        super().append(value)
+    def append(self, object):
+        print("Added [{}] to the list.".format(object))
+        super().append(object)
+
+    def extend(self, iterable):
+        print("Extended the list with [{}] items.".format(iterable))
+        super().extend(iterable)
     
-    def extend(self, value):
-        print(f"Extended the list with [{len(value)}] items.")
-        super().extend(value)
-
     def remove(self, value):
-        print(f"Removed [{value}] from the list.")
+        print("Removed [{}] from the list.".format(value))
         super().remove(value)
-
-    def pop(self, value):
-        if value is None:
+        
+    def pop(self, index=None):
+        if index is None:
             item = super().pop()
-            print(f"Popped [{item}] from the list.")
+            print("Popped [{}] from the list.".format(item))
             return item
         else:
-            item = super().pop(value)
-            print(f"Popped [{item}] from the list.")
+            item = super().pop(index)
+            print("Popped [{}] from the list.".format(item))
             return item
