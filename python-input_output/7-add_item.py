@@ -6,11 +6,17 @@ load_from_json_file = __import__('6-load_from_json_file.py').load_from_json_file
 save_to_json_file = __import__('5-save_to_json_file.py').save_to_json_file
 filename = "add_item.json"
 
-try:
-    new_list = load_from_json_file(filename)
-except FileNotFoundError:
-    new_list = []
 
-new_list.extend(words[1:])
+def main():
+    """adds all arguments to a Python list"""
 
-save_to_json_file(new_list, filename)
+    try:
+        my_obj = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        my_obj = []
+    my_obj += argv[1:]
+    save_to_json_file(my_obj, "add_item.json")
+
+
+if __name__ == "__main__":
+    main()
