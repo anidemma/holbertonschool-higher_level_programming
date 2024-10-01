@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """ writes an Object to a text file, using a JSON representation"""
-import json
+from sys import argv as words
 
 
 from 5-save_to_json_file.py import save_to_json_file
