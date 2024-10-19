@@ -4,17 +4,18 @@ import csv
 def fetch_and_print_posts():
     request = requests.get("https://jsonplaceholder.typicode.com/posts")
     posts = request.json()
-    
+
+    print("Status Code: {}".format(request.status_code))    
     if request.status_code == 200:
         for post in posts:
             print(post["title"])
-    else:
         print(request.status_code)
 
 def fetch_and_save_posts():
     request = requests.get("https://jsonplaceholder.typicode.com/posts")
     posts = request.json()
 
+    print("Status Code: {}".format(request.status_code))
     if request.status_code == 200:
         with open('file2.csv', 'w', newline='') as f:
             fieldnames = ['id', 'title', 'body']
@@ -22,5 +23,4 @@ def fetch_and_save_posts():
             writer.writeheader()
             for post in posts:
                 writer.writerow({'id': post['id'], 'title': post['title'], 'body': post['body']})
-    else:
         print(request.status_code)
