@@ -17,7 +17,7 @@ def fetch_and_save_posts():
 
     print("Status Code: {}".format(request.status_code))
     if request.status_code == 200:
-        with open('file2.csv', 'w', newline='') as f:
+        with open('posts.csv', 'w', newline='') as f:
             fieldnames = ['id', 'title', 'body']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
