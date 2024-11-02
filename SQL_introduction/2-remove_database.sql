@@ -1,2 +1,2 @@
---remove database if missin
+-- remove database if missin
 DROP DATABASE IF EXISTS hbtn_0c_0;
